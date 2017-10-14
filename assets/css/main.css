@@ -13,6 +13,8 @@
 
     float: left;
     margin: 5px;
+    text-align: center;
+    
    
 
 } 
@@ -2089,7 +2091,7 @@
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 70%;
+		width: 80%;
 	}
 
 		input[type="text"]:invalid,
