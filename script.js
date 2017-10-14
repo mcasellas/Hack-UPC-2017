@@ -33,6 +33,7 @@ audioTag.addEventListener('playing', updateProgressState);
 
 function updatePlayLabel() {
   playButton.innerHTML = audioTag.paused ? 'Play track' : 'Pause track';
+   
 }
 
 audioTag.addEventListener('play', updatePlayLabel);
@@ -151,12 +152,14 @@ document.querySelector('form').addEventListener('submit', function(formEvent) {
     queryInput.value.trim(), {limit: 1})
     .then(function(results) {
       var track = results.tracks.items[0];
+      
 
-     
+    
       
-      var previewUrl = track.preview_url;
+    if (track.preview_url != null) var previewUrl = track.preview_url;
+    else var previewUrl = "./assets/audio.mp3";
       
-      audioTag.src = track.preview_url;
+      audioTag.src = previewUrl;
 
       var request = new XMLHttpRequest();
       request.open('GET', previewUrl, true);
@@ -234,15 +237,19 @@ document.querySelector('form').addEventListener('submit', function(formEvent) {
           svg.appendChild(rect);
 
           svg.innerHTML = svg.innerHTML; // force repaint in some browsers
+            
+            
+            
+           
 
           var top = groups.sort(function(intA, intB) {
             return intB.count - intA.count;
           }).splice(0, 5);
 
-          text.innerHTML = '<div id="guess">Títol: <strong>' + track.name + '<br></strong> Artista: ' +
-            '<strong>' + track.artists[0].name;
+          text.innerHTML = '<div><h2>' + track.name + '<br></h2>' +
+            '<h3>' + track.artists[0].name + '</h3>';
 
-          text.innerHTML += '<div class="small">'  + '<img src="' + results.tracks.items[0].album.images[0].url + '">'
+          text.innerHTML += '<div class="small">'  + '<img src="' + results.tracks.items[0].album.images[1].url + '">'
             
             '</div>';
 
