@@ -11,7 +11,8 @@
 
 .boton { 
 
-    float: left; 
+    float: left;
+    margin: 5px;
    
 
 } 
@@ -2088,7 +2089,7 @@
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 80%;
+		width: 70%;
 	}
 
 		input[type="text"]:invalid,
