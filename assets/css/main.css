@@ -2091,7 +2091,7 @@
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 80%;
+		width: 83%;
 	}
 
 		input[type="text"]:invalid,
@@ -2325,8 +2325,7 @@
 		}
 
 		.icon.major {
-			border: solid 1px;
-			display: inline-block;
+			
 			border-radius: 100%;
 			padding: 0.65em;
 			margin: 0 0 2em 0;
@@ -3264,6 +3263,7 @@
 		border-top-right-radius: 0.25em;
 		cursor: default;
 		text-align: center;
+        
 	}
 
 		#nav input, #nav select, #nav textarea {

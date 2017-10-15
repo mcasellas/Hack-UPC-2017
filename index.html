@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Spot The Fall</title>
+		<title>Spotify Metadata Finder</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -23,13 +23,22 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>SPOT THE FALL </h1>
+						<span class="icon major fa-spotify"></span>
+						<h1>Spotify Metadata Finder</h1>
                         
                        </header>
                 
+                <nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Principle</a></li>
+							<li><a href="./database.html">+ Database</a></li>
+							<li><a href="#second">Second Section</a></li>
+							<li><a href="#cta">Get Started</a></li>
+						</ul>
+					</nav>
+                
                 <section>
-											
+								<br>			
                                     
                         <h2>A music relevant data searcher for media:</h2>
                         <br>
@@ -37,37 +46,37 @@
                       
                                     
                                     <form>
-			<input class="boton" type="text" id="query" autofocus="autofocus" placeholder="Type the name of a track or an artist and hit ENTER">
+			<input class="boton" type="text" id="query" autofocus="autofocus" placeholder="Type the name of a track or an artist and hit enter :)">
             
 			
-                                    
-            <input class="boton" type="button" id="play" value="Play track">
+             <ul class="actions">
+											<li><a id="play_music" class="boton button special icon fa-play">Play</a></li>
+											
+										</ul>                       
+        
                                        
                               
                                         
 		</form>
                     <br>
-                           
-                            
-                        
+                
             <div id="result">
 			<div id="text">
             </div>
-			<div>
-         
-				
-			</div>
-
+			
+            <img id="caratula" src="">
+            <div id="info">
+                </div>
 			<audio id="audio"></audio>
                                 
        
-		</div>
+		      </div>
+                    
 					</section>
 
-		
 					<footer id="footer">
                        
-						<p class="copyright">For HackUPC (Fall 2017) </p>
+						<p class="copyright">For HackUPC (Fall 2017)   v1.0 </p>
 					</footer>
 
 			</div>

@@ -154,7 +154,7 @@ var SpotifyWebApi = (function() {
    */
   Constr.prototype.getAudioFeaturesForTrack = function(trackId, callback) {
     var requestData = {
-      url: _baseUri + '/audio-features/' + trackId
+      url: _baseUri + '/audio-features/?ids=' + trackId
     };
     return _checkParamsAndPerformRequest(requestData, {}, callback);
   };
