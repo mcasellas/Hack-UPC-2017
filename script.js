@@ -46,8 +46,7 @@ document.querySelector('form').addEventListener('submit', function(formEvent) {
   result.style.display = 'none';
     
     
-  spotifyApi.searchTracks(
-    queryInput.value.trim(), {limit: 1})
+  spotifyApi.searchTracks(queryInput.value.trim(), {limit: 1})
     .then(function(results) {
       var track = results.tracks.items[0];
       
@@ -76,12 +75,13 @@ document.querySelector('form').addEventListener('submit', function(formEvent) {
       request.onload = function() {
          
 
-          text.innerHTML = '<div><h2>' + track.name + '<br></h2>' +
+          text.innerHTML = '<h2>' + track.name + '<br></h2>' +
             '<h3>' + track.artists[0].name + '</h3>';
 
           caratula.src = track.album.images[1].url;
           
-        info.innerHTML = afeature.energy;
+        info.innerHTML = 'Energy: ' + afeature.energy*100 + '% <br>'
+    + 'Danceability: ' + afeature.danceability*100 + '%';
            
           result.style.display = 'block';
           
